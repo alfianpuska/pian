@@ -1,0 +1,94 @@
+HTML
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+ content="width=device-width,
+ initial-scale=1.0">
+
+    <title>Thank You Message</title>
+
+    <style>
+
+        #thankYouMessage {
+
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 10px;
+
+            border: 1px solid #ddd;
+
+            background-color: #f9f9f9;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Ceritaku!</h1>
+
+    <p><a href="#" onclick="showMessage();
+ return false;">Klik disini nggor</a></p>
+
+
+    <div id="thankYouMessage"></div>
+
+
+    <script>
+
+        function showMessage() {
+
+            const messageContainer = document.getElementById('thankYouMessage');
+
+            messageContainer.style.display = 'block';
+
+
+            const totalMessages = 100;
+
+            const intervalTime = 300 * 1000 / totalMessages; // 300,000 ms divided by 100 messages
+
+
+
+            let count = 0;
+
+            const interval = setInterval(() => {
+
+                if (count >= totalMessages) {
+
+                    clearInterval(interval);
+
+                    return;
+
+                }
+
+
+
+                const message = document.createElement('p');
+
+                message.textContent = 'CEMAS KAU DEKK,WKWKWK DAPET ISI GALERI DOKUMEN DOKUMEN WKWKWK TENANGG AKU GAK JAHAT JAHAT BANGET AHAHAHAHAHA CEMASS KAU DEKK';
+
+                messageContainer.appendChild(message);
+
+
+                count++;
+
+            }, intervalTime);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
